@@ -1,9 +1,12 @@
-function random(){
-  var min = 10;
-  var max = 100;
-  number1 = Math.floor(Math.random() * (max - min) + min);
-  number2 = Math.floor(Math.random() * (max - min) + min);
+var random = require('./random.js')
 
+function compare(){
+  var number1, number2;
+
+  random = random(number1, number2);
+
+  number1 = random.number1;
+  number2 = random.number2;
 
   if (number1 > number2) {
     a = (number1 + ' ' + '>' + ' ' + number2);
@@ -19,4 +22,4 @@ function random(){
   }
 }
 
-module.exports.random = random;
+module.exports.compare = compare;
